@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Formulari</title>
+    <script>
+        window.onload = function start() {
+            document.getElementById('selec').style.display = "block";
+            document.getElementById('divtelep').style.display = "block";
+            document.getElementById('divbook').style.display = "none";
+        }
+
+        function before() {
+            document.getElementById('selec').style.display = "block";
+            document.getElementById('divtelep').style.display = "block";
+            document.getElementById('divbook').style.display = "none";
+        }
+
+        function after() {
+            document.getElementById('selec').style.display = "none";
+            document.getElementById('divtelep').style.display = "none";
+            document.getElementById('divbook').style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <form id="Form" autocomplete="off">
+
+        <div id="header">
+
+            <p><i class="fas fa-envelope"> </i>Leave a message</p>
+        </div>
+
+        <fieldset>
+            <legend>Choose your form</legend>
+            <input type="radio" name="choose" value="before" onclick="before()" checked> Before<br>
+            <input type="radio" name="choose" value="after" onclick="after()"> After<br>
+        </fieldset>
+
+        <select id="selec" name="options" form="Form">
+            <option value="option0">[Choose one of the options...]</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+          </select>
+        <div id="flexbox">
+            <div class="inputs"><label for="name">Name</label> <input id="name" type="text" maxlength="20" required></div>
+            <div class="inputs"><label for="surname">Surname</label> <input id="surname" type="text" maxlength="25" required></div>
+            <div class="inputs"><label for="mail">E-mail</label> <input id="mail" type="email"></div>
+            <div id="divtelep"><label for="telep">Telephone</label> <input id="telep" type="text" placeholder="699-999999" pattern="[0-9]{3}-[0-9]{6}" required></div>
+            <div id="divbook"><label for="book">Booking Number</label> <input id="book" type="text" pattern="[A-Z]{4}-[0-9]{2}" required></div>
+        </div>
+        <div> <textarea rows="4" cols="50" placeholder="Write your message..." maxlength="50" required></textarea></div>
+        <button>Send Form</button>
+    </form>
+</body>
+
+</html>

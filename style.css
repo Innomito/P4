@@ -1,0 +1,61 @@
+#Form {
+    border: 1px solid #b3b3b3;
+    padding: 5px;
+    width: 40%;
+}
+
+fieldset {
+    border-color: white;
+}
+
+#header {
+    color: #7CB021;
+}
+
+input[type=text] {
+    border: 0px;
+}
+
+input[type=text]:focus {
+    outline: 0px;
+}
+
+#mail {
+    border: 0px;
+}
+
+.inputs {
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    width: 45%;
+    margin: 5px;
+}
+
+#divtelep {
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    width: 45%;
+    margin: 5px;
+}
+
+#divbook {
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    width: 45%;
+    margin: 5px;
+}
+
+button {
+    background-color: #008ED8;
+    color: white;
+    padding: 3px 6px;
+}
+
+#flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+textarea {
+    width: 98%;
+}
